@@ -283,7 +283,7 @@ Pitchfork → 金属干草叉
 Wood pitchfork → 木制干草叉
 Wood pickaxe → 木镐
 Wood digging tool → 木质挖掘工具
-Climbing rope extended → 攀爬绳
+Climbing rope → 攀爬绳
 
 枪械/弹药：
 Pistol → 手枪
@@ -346,7 +346,7 @@ Trash bag → 垃圾袋
 Foliage bag → 植物纤维袋
 Sling bag → 植物纤维挎包
 Plastic bag → 塑料袋
-Grav-Bag → 重力袋
+Gravbag → 重力袋
 Leg pouch → 腿包
 Liquid pouch → 液体袋
 Material pouch → 材料袋
@@ -360,7 +360,6 @@ Small backpack → 小型背包
 Duffel bag → 帆布背包
 Backpack → 双肩背包
 Fanny pack → 腰包
-Ammo pouch → 弹药包
 Bandolier → 子弹带
 Belt → 皮带
 Trauma rig → 战术胸挂
