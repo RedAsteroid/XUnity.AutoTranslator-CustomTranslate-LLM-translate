@@ -23,8 +23,10 @@ class OpenaiLlm:
         try:
             if "deepseek" in self.model_name:
                 response_format = {"type": "json_object"}
+                extra = {"thinking": {"type": "disabled"}}   # 关闭思考模式
             else:
                 response_format = None
+                extra = None
 
             messages = self.build_messages(
                 user_message=user_message,
@@ -37,7 +39,8 @@ class OpenaiLlm:
                 messages=messages,
                 stream=False,
                 response_format=response_format,
-                timeout=60.0
+                timeout=60.0,
+                extra_body=extra,
             )
 
             ai_response_json = response.choices[0].message.content
