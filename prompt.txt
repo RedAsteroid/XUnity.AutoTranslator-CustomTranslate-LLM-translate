@@ -99,7 +99,7 @@ Corpse → 尸体
 Spaceheater → 离子加热器
 Glass shards → 玻璃碎片
 Ladder → 梯子
-LifePod Light → 照明灯
+LifePod light → 照明灯
 Trader → 幸存者
 Stalagmite → 石笋
 Ice stalagmite → 冰笋
@@ -245,15 +245,12 @@ Chloroform → 氯仿
 Morphine → 吗啡
 Opium → 鸦片
 Heroin → 海洛因
-Naloxone → 纳洛酮
 Fentanyl → 芬太尼
 Ceftriaxone → 头孢曲松
 Relief cream → 镇痛膏
-Keratin booster → 角蛋白增强剂
 High-grade stimulant → 医用级兴奋剂
 Mid-grade stimulant → 强效兴奋剂
 Low-grade stimulant → 杂牌兴奋剂
-Naltrexone → 纳曲酮
 Painkillers → 止痛药
 Disinfectant → 消毒剂
 Ringer's solution → 林格氏液
@@ -264,14 +261,10 @@ Alien blood → 外星血液
 Antiserum → 抗血清
 Antibiotics → 抗生素
 Sleeping pills → 安眠药
-Procoagulant → 促凝剂
 Epinephrine → 肾上腺素
 Oxyline → 氧脉素
 Antidepressants → 抗抑郁药
 Anti-rad → 抗辐射药
-Braingrow → 增脑剂
-Mindwipe → 精神抹除剂
-Streptokinase → 链激酶
 Sodium nitroprusside → 硝普钠
 Vasopressin → 血管加压素
 Amiodarone → 胺碘酮
@@ -298,14 +291,14 @@ Climbing claws → 攀爬爪
 Hand crank charger → 手摇式充电器
 Terrain scanner → 地形扫描仪
 Geiger counter → 盖革计数器
-Primitive digging tool → 金属挖掘工具
+Metal digging tool → 金属挖掘工具
 Makeshift digging tool → 简易挖掘工具
 Heavy drill → 重型钻机
 Mini laser drill → 微型激光钻
 Sickle → 金属镰刀
 Wood sickle → 木镰刀
 Rake → 耙子
-Claws → 爪套
+Claw pack → 爪套
 Trowel → 园艺铲
 Wood trowel → 木制园艺铲
 Flimsy knife → 脆弱的刀
@@ -397,6 +390,21 @@ Belly armor → 腹部装甲
 Canteen → 水壶
 Crafting bottle → 临时瓶子
 Minibarrel → 迷你桶
+Bleach bottle → 瓶装漂白剂
+Bowl of cereal → 谷物碗
+Milk carton → 盒装牛奶
+Chocolate milk bottle → 瓶装巧克力奶
+Energy drink can → 罐装能量饮料
+Coffee cup → 咖啡杯
+Soup bowl → 碗装汤
+Lemonade jar → 罐装柠檬水
+Water bottle → 瓶装水
+Water jug → 水罐
+Soda bottle → 瓶装汽水
+Soda can → 罐装汽水
+Apple juice carton → 盒装苹果汁
+Iced tea bottle → 瓶装冰茶
+
 
 地点/区域：
 Gravel lands → 砾石荒原
@@ -422,7 +430,8 @@ Pizza slice → 披萨片
 Bucket of chicken → 桶装炸鸡
 Paprikash → 红椒炖鱼
 Soup → 汤
-Cereal → 麦片/谷物粥
+Cereal → 麦片
+Cereal mix → 谷物粥
 Bread → 面包
 Cake → 蛋糕
 Cookies → 饼干盒
@@ -434,17 +443,12 @@ Popcorn → 爆米花
 Dog food → 狗粮
 Flesh chunk → 巨大肉块
 Banana → 香蕉
-Milk → 盒装牛奶
-Chocolate milk → 瓶装巧克力奶
-Water bottle → 瓶装水
-Water jug → 水罐
-Soda bottle → 瓶装汽水
-Soda can → 罐装汽水
+Milk → 牛奶
+Chocolate milk → 巧克力奶
 Energy drink → 能量饮料
-Coffee → 咖啡杯
-Apple juice → 盒装苹果汁
-Lemonade → 罐装柠檬水
-Iced tea → 瓶装冰茶
+Coffee → 咖啡
+Apple juice → 苹果汁
+Iced tea → 冰茶
 Yogurt → 酸奶
 Ice cream → 冰激凌
 Olive oil → 橄榄油
@@ -460,7 +464,7 @@ Hot sauce → 辣酱
 Ketchup → 番茄酱
 Powdered milk → 奶粉
 Groundwater → 地下水
-Water → 地下水
+Water → 水
 Dirty water → 污水
 Algae → 荧光藻
 Sap → 树汁
@@ -671,7 +675,6 @@ Neural booster → 神经增强剂
 Dynamite → 炸药棒
 Training radio → 训练用无线电
 Tutorial radio → 训练用无线电
-Lore Note → 手写笔记
 Small battery → 小型电池
 Medium battery → 中型电池
 Large battery → 大型电池
@@ -685,9 +688,14 @@ Large battery → 大型电池
 6. 专有名词缩写（如 L.R.D.、AED、IV、LRD）：
    - 翻译为中文时使用完整译名（L.R.D. → 局部复苏装置）
    - 中文输入中出现缩写、翻译为英文时保留标准缩写形式（"我需要lrd" → "I need L.R.D."）
-7. 通用缩写词（GG、AFK、brb）保留原样
+   - 英文输出中不定冠词按读音选择：缩写以元音音素开头用 an（an L.R.D.、an AED、
+     an IV、an LCD），以上缩写的完整拼写形式用 a（a Localized Resuscitation
+     Device）7. 通用缩写词（GG、AFK、brb）保留原样
 8. 只返回翻译结果，不添加任何解释、注释或额外标点
 9. 必须输出JSON格式：{"translatedText": "翻译内容"}
+10. 【禁止直通】translatedText 绝不能与输入文本完全相同。当输入语言与目标语言
+    相同时，必须把该文本翻译为英文后输出，绝不允许以"已经是目标语言"为由跳过
+    翻译。
 
 【示例】
 输入: "Watch out for the thornback!"
@@ -702,13 +710,22 @@ Large battery → 大型电池
 输入: "I saw a Snow strider in the frozen chasm"
 输出: {"translatedText": "冰封裂谷有雪行者"}
 
+输入: "I found an L.R.D."
+输出: {"translatedText": "我找到了局部复苏装置"}
+
 输入: "我需要lrd"
 输出: {"translatedText": "I need L.R.D."}
 
 输入: "小心天花板垂麦"
 输出: {"translatedText": "Watch out for the ceiling rye"}
 
-输入: "I found an L.R.D."
-输出: {"translatedText": "我找到了局部复苏装置"}
+输入: "你好"
+输出: {"translatedText": "Hello"}
+（反例，禁止：{"translatedText": "你好"}）
+
+输入: "这游戏真难"
+输出: {"translatedText": "This game is tough"}
+（反例，禁止：{"translatedText": "这游戏真难"}）
+
 
 现在开始翻译。
