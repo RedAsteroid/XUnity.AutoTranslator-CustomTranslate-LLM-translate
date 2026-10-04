@@ -15,6 +15,20 @@ logger.add(
     format="{time:YYYY-MM-DD HH:mm:ss.SSS} - {level: <8} - {message}"
 )
 
+missing = [
+    name
+    for name, value in (("model_name", model_name), ("base_url", base_url), ("api_key", api_key))
+    if not str(value or "").strip()
+]
+
+if missing:
+    print("=" * 46)
+    print("  翻译服务无法启动")
+    print("  config.yaml 中以下必填项尚未填写：" + "、".join(missing))
+    print("  请填写后重新运行 run.bat。")
+    print("=" * 46)
+    raise SystemExit(1)
+
 app = FastAPI()
 client = AsyncOpenAI(
     api_key=api_key,

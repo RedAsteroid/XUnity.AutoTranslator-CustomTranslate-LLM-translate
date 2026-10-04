@@ -1,3 +1,79 @@
-model_name: "deepseek-chat"
-base_url: "https://api.deepseek.com"
+# ============================================================
+#  翻译服务配置
+#  修改后保存，并重新启动服务（run.bat）即可生效。
+#  以 # 开头的行均为说明文字，不影响服务运行。
+#
+#  各项注释中的「默认」指该行未填写时程序采用的行为。
+# ============================================================
+
+# ---------------------- 必填项 ----------------------
+
+# 模型名称。请查阅服务商文档，填写可用的模型标识。本项必填，无默认值。
+model_name: ""
+
+# 接口地址。请填写服务商提供的 OpenAI 兼容端点，通常以 /v1 结尾。本项必填，无默认值。
+base_url: ""
+
+# API 密钥。请在服务商控制台创建；留空将导致服务无法启动。本项必填，无默认值。
 api_key: ""
+
+# 切换服务商时，model_name 与 base_url 需同时替换。示例：
+#   DeepSeek：model_name "deepseek-flash"，base_url "https://api.deepseek.com"
+#            并将下方 send_temperature、send_max_tokens 改为 true
+
+# ---------------------- 可选设置 ----------------------
+
+# 采样温度。建议 0.2~0.4 以保证译文稳定；数值越大，表达越多样。
+# 默认：不发送
+temperature: 0.3
+
+# 是否将采样温度随请求发送。
+#   示例 true ：DeepSeek（允许自定义温度，范围 0~2；思考模式下该参数不生效）
+#   示例 false：Kimi（kimi-k2.6 / kimi-k3 / kimi-k2.7-code 的温度由服务固定，
+#                    传入自定义值会被拒绝并返回错误）
+# 默认：true
+send_temperature: true
+
+# 单次输出长度上限。注意：部分服务在思考模式下会因此截断回答，导致译文为空。
+# 默认：不发送
+max_tokens: 512
+
+# 是否将长度上限随请求发送。
+#   示例 true ：DeepSeek（正常支持该参数；不填写则由服务端决定，非思考模式默认 8K）
+#   示例 false：Kimi（该参数已标记为废弃，改用 max_completion_tokens；
+#                    且在思考模式下会把输出预算耗在思考上，导致译文为空）
+# 默认：true
+send_max_tokens: true
+
+# 长度参数的名称，可选 max_tokens 或 max_completion_tokens。
+# 默认：max_tokens（填写其他值也会回退为 max_tokens）
+max_tokens_param: "max_tokens"
+
+# 是否要求服务端以 JSON 格式返回结果（即 response_format = json_object）。
+# 与提示词中的要求一致，可提高解析成功率。
+# 默认：true
+json_mode: true
+
+# 思考模式。程序据此在请求中发送 {"thinking": {"type": "disabled" 或 "enabled"}}。
+#   false：响应更快、费用更低
+#   true ：推理更充分，但响应更慢、费用更高
+# 默认：false（此时请求中发送 disabled）
+thinking: false
+
+# 是否将思考开关随请求发送。设为 false 时完全不发送，由服务商决定是否思考。
+# 默认：true
+send_thinking: true
+
+# 服务商特有参数，JSON 格式，解析后与上述参数合并发送；与 thinking 冲突时以此处填写的值为准。
+# 格式错误将被忽略，并在日志中给出提示。
+# 默认：留空，不发送
+# 示例：通义千问 {"enable_thinking": false}；Kimi K3 {"reasoning_effort": "low"}
+extra_body_json: ''
+
+# 单次请求的超时时间，单位：秒（每次尝试单独计时）。
+# 默认：60 秒
+timeout: 60
+
+# 网络异常（限流、服务端错误、连接失败）时的自动重试次数。
+# 默认：0（不重试）
+max_retries: 0
